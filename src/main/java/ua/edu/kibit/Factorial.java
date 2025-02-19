@@ -10,7 +10,7 @@ public class Factorial {
 //        System.out.println("factorialWithWhileLoopWithDecrement=" + findFactorialWithWhileLoopWithDecrement(7));
 //        System.out.println("factorialWithDoWhileLoopWithDecrement=" + findFactorialWithDoWhileLoopWithDecrement(7));
         System.out.println("factorialWithRecursion" + findFactorialRecursive(7));
-        
+
     }
 
     private static long findFactorialRecursive(int inputNumber) {
@@ -19,6 +19,10 @@ public class Factorial {
         } else {
             return inputNumber * findFactorialRecursive(inputNumber - 1);
         }
+    }
+
+    private static long findFactorialRecursiveTernary(int inputNumber) {
+        return inputNumber <= 1 ? 1 : inputNumber * findFactorialRecursive(inputNumber - 1);
     }
 
     private static int findMinNumber(int firstNumber, int secondNumber, int thirdNumber) {
