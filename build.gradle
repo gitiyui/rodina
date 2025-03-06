@@ -17,3 +17,18 @@ dependencies {
 test {
     useJUnitPlatform()
 }
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'ua.edu.kibit.ArraySorting'
+    }
+}
+
+tasks.register('createFatJar', Jar) {
+    manifest {
+        attributes 'Main-Class': 'ua.edu.kibit.ArraySorting'
+    }
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    from { configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) } }
+    with jar
+}
