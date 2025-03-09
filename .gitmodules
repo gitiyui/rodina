@@ -1,0 +1,3 @@
+[submodule "ki23-fundamentals"]
+	path = ki23-fundamentals
+	url = https://github.com/kibit-edu-ua/ki23-fundamentals.git
